@@ -63,11 +63,6 @@ set :bundle_binstubs, -> { shared_path.join('bin') }
 
 # set :print_config_variables, true # デプロイ前に設定した変数値を確認
 
-################################################################################ Whenever
-
-set :whenever_identifier, -> { "#{fetch(:application)}_#{fetch(:stage)}" }
-set :whenever_path,       -> { release_path } # FIXME: whenever (0.10.0) 以下の場合のみ
-
 ################################################################################ rails: シリーズ
 
 # gem より

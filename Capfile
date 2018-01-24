@@ -19,18 +19,11 @@ require 'capistrano/deploy'
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
-# 本家の隠しタスク cap production console
-require "capistrano/console"
-
-require 'capistrano/rails/console'
-
 # require 'capistrano/rvm'
 require 'capistrano/rbenv'
 # require 'capistrano/chruby'
 require 'capistrano/rails' # bundler + rails/assets + rails/migrations
 require 'capistrano/passenger'
-
-require "whenever/capistrano"
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
