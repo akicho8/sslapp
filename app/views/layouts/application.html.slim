@@ -1,0 +1,15 @@
+doctype 5
+html lang="ja"
+  head
+    meta charset="UTF-8"
+    meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    = favicon_link_tag
+    = csrf_meta_tag
+    = action_cable_meta_tag
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = yield :head
+  body
+    = link_to("root", :root, class: "navbar-brand")
+    = yield
