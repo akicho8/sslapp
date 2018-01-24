@@ -9,7 +9,6 @@ end
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -17,7 +16,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
+# gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -65,63 +64,7 @@ group :development, :test do
   gem 'capistrano-rails'        # capistrano + capistrano-bundler
   gem 'capistrano-passenger'
   gem 'capistrano-rbenv'
-  gem 'capistrano-yarn'
-  gem "capistrano-rails-console"
-
-  gem 'rspec-rails'
-  gem 'test-unit'
-  gem 'factory_bot_rails'
-  # gem 'webmock' # rack-proxy と干渉するため外す
-
-  gem 'bullet'
 end
 
-group :development do
-  gem 'foreman', require: false
-end
-
-group :test do
-  gem 'chromedriver-helper'     # for SystemTestCase
-end
-
-
-# gem 'activerecord-session_store'
-
-# gem 'compass-rails'
 gem 'slim-rails'
-
-gem 'rails_autolink'
-gem 'kaminari'
-gem 'carrierwave'
-
-gem 'memory_record'
-gem 'tree_support'
-gem 'org_tp'
-gem 'html_format'
-gem 'daiku',         github: 'akicho8/daiku'
-gem 'aam',           github: 'akicho8/aam'
-gem 'bushido',       github: 'akicho8/bushido'
-
-# for SwarsBattleAgent
-gem 'nokogiri'
-gem 'mechanize'
-
-gem 'acts_as_list'
-
-gem 'faraday'
-
-gem 'acts-as-taggable-on'
-
-gem 'bootstrap-sass'
-gem 'bootswatch-rails'
-gem 'font-awesome-sass'
-
-gem 'rubyzip', require: "zip"
-
-gem 'whenever', require: false
-
-gem 'exception_notification'
-
-gem 'codecov', :require => false, :group => :test
-
 gem 'rack-cors', :require => 'rack/cors'
