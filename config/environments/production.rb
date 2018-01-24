@@ -88,37 +88,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  # ################################################################################ ActionMailer
-  config.action_mailer.show_previews = true
-  config.action_mailer.default_url_options = { host: "tk2-221-20341.vs.sakura.ne.jp" }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_caching = true
-  config.action_mailer.smtp_settings = {
-    enable_starttls_auto: true,
-    address: "smtp.gmail.com",
-    domain: "smtp.gmail.com",
-    port: 587,
-    authentication: "plain",
-    user_name: "pinpon.ikeda",
-    password: ENV["GMAIL_APP_PASSWORD"],
-  }
-
-  # ################################################################################ ActionCable
-  config.action_cable.allowed_request_origins = [/https?:\/\/.*/]
-  # if ENV["RAILS_RELATIVE_URL_ROOT"]
-  #   # config.action_cable.mount_path = ENV["RAILS_RELATIVE_URL_ROOT"] + "/cable" # /cable の 404 になるのを防ぐため
-  #   # config.action_cable.mount_path = "/cable123"
-  # end
-  config.action_cable.url = "ws://tk2-221-20341.vs.sakura.ne.jp:28080"
-
-  # ################################################################################ エラーメール
-
-  config.middleware.use(ExceptionNotification::Rack,
-    :email => {
-      :email_prefix         => "[sslapp] ",
-      :sender_address       => "pinpon.ikeda@gmail.com",
-      :exception_recipients => %w{pinpon.ikeda@gmail.com},
-    })
 end
